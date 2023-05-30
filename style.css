@@ -1,0 +1,22 @@
+/* *{ border: 1px solid; } */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+html, body{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+.portfolio{
+    font-size: 72px;
+    line-height: 84px;
+    color: #212529;
+}
+.text-1{
+    line-height: 19px;
+    color: #212529;
+}
+@media screen and (max-width: 768px){
+    .portfolio{font-size: 48px;}
+}
+@media screen and (max-width: 290px){
+    .portfolio{font-size: 36px;}
+}
