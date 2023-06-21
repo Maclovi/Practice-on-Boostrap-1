@@ -16,7 +16,7 @@
       <!-- place navbar here -->
     <nav class="navbar navbar-expand-md bg-dark" data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">НЛК</a>
+        <a class="navbar-brand" href="index.html">НЛК</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -26,7 +26,7 @@
               <a class="nav-link active" aria-current="page" href="#portfolio">Портфолио</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Рейтинг</a>
+              <a class="nav-link" href="#rating">Рейтинг</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#footer">Помощь</a>
@@ -40,7 +40,7 @@
 
   <main class="main">
     <!-- place portfolio here -->
-    <div class="jumb p-lg-5 p-3 bg-light rounded-3" id="portfolio">
+    <div class="jumb p-lg-5 p-3 bg-light rounded-3" id="portfolio" data-bs-toggle="modal" data-bs-target="#firstModal">
       <div class="container-fluid py-md-5 py-3">
         <h1 class="portfolio">Портфолио</h1>
         <p class="col-lg-6 col-md-11 col-12 text-1">Это место, где собраны ваши научные публикации. Здесь вы можете добавлять свои работы, получать информацию об их уникальности и смотреть отзывы ваших научных руководителей.</p>
@@ -79,7 +79,7 @@
     <!-- place card END -->
 
     <!-- place table here -->
-    <div class="container-fluid px-3 px-md-5 mb-5 overflow-x-auto">
+    <div class="container-fluid px-3 px-md-5 mb-5 overflow-x-auto" id="rating">
       <table class="table table-striped table-bordered">
         <thead class="border-0 border-bottom border-3">
           <tr class="border">
@@ -164,11 +164,61 @@
     </div>
     <!-- place footer END -->  
   </footer>
-
   <!-- Modal window start -->
+<div class="modal fade" id="firstModal" tabindex="-1" aria-labelledby="firstModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="firstModalLabel">Добавить работу</h1>
+      </div>
+      <div class="modal-body">
+        <form class="was-validated">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Название работы</label>
+              <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Например - машинный анализ рынка фьючерсов" required>
+              <div class="invalid-feedback">Название отсутвует</div>
+            </div>
+        
+          <div class="mb-3">
+            <select class="form-select" required aria-label="select example">
+              <option value="">Выберите ваш профиль</option>
+              <option value="1">Инвестиции</option>
+              <option value="2">Трейдинг</option>
+              <option value="3">Ивестиции и Трейдинг</option>
+            </select>
+            <div class="invalid-feedback">Вариант не выбран</div>
+          </div>
+        
+          <div class="mb-3">
+            <input type="file" class="form-control" aria-label="file example" required>
+            <div class="invalid-feedback">Example invalid form file feedback</div>
+          </div>
 
+          <div class="form-check mb-3">
+            <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+            <label class="form-check-label" for="validationFormCheck1">Согласен на обработку персональных данных</label>
+            <div class="invalid-feedback">Согласие не выбрано</div>
+          </div>
+        
+          <div class="form-check">
+            <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+            <label class="form-check-label" for="validationFormCheck2">Я - мужчина</label>
+          </div>
+          <div class="form-check mb-3">
+            <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+            <label class="form-check-label" for="validationFormCheck3">Я - женщина</label>
+            <div class="invalid-feedback">Гендер не выбран</div>
+          </div>
+        
+          <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
   <!-- Modal window end -->
-
   <!-- Bootstrap JavaScript Libraries -->
     <script src="js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   </body>
